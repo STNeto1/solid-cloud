@@ -1,5 +1,7 @@
 import type { Component } from "solid-js";
+import { Route, Routes } from "@solidjs/router";
 import { Link } from "~/components/Link";
+import { HourlyPage } from "~/routes/Hourly";
 
 const App: Component = () => {
   return (
@@ -10,6 +12,10 @@ const App: Component = () => {
         <Link href="/uptime">Uptime</Link>
         <Link href="/storage">Storage</Link>
       </nav>
+
+      <Routes>
+        <Route path="/hourly" element={<HourlyPage />} />
+      </Routes>
     </section>
   );
 };
