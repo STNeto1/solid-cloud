@@ -2,6 +2,7 @@ import type { Component } from "solid-js";
 import { Route, Routes } from "@solidjs/router";
 import { Link } from "~/components/Link";
 import { HourlyPage } from "~/routes/Hourly";
+import { UptimePage } from "./routes/Uptime";
 
 const App: Component = () => {
   return (
@@ -15,6 +16,7 @@ const App: Component = () => {
 
       <Routes>
         <Route path="/hourly" element={<HourlyPage />} />
+        <Route path="/uptime" element={<UptimePage />} />
       </Routes>
     </section>
   );
