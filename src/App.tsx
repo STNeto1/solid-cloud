@@ -4,6 +4,7 @@ import { Link } from "~/components/Link";
 import { HourlyPage } from "~/routes/Hourly";
 import { UptimePage } from "~/routes/Uptime";
 import { HomePage } from "~/routes/Home";
+import { _404Page } from "~/routes/_404";
 
 const App: Component = () => {
   return (
@@ -21,6 +22,7 @@ const App: Component = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/hourly" element={<HourlyPage />} />
         <Route path="/uptime" element={<UptimePage />} />
+        <Route path="*" element={<_404Page />} />
       </Routes>
     </section>
   );
