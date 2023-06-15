@@ -1,5 +1,6 @@
 import { createMemo, createSignal, For, VoidComponent } from "solid-js";
 import { Button } from "~/components/Button";
+import { Divider } from "~/components/Divider";
 import { DowntimeCard } from "~/components/DowntimeCard";
 import { Input } from "~/components/Input";
 import { formatTime, uptimeFn } from "~/lib/uptime";
@@ -33,8 +34,8 @@ export const UptimePage: VoidComponent = () => {
   );
 
   return (
-    <section class="container max-w-5xl h-full flex items-center justify-center flex-col pt-8 lg:pt-0">
-      <section class="w-full p-4 flex flex-col items-center gap-4">
+    <section class="h-full flex items-center justify-center flex-col">
+      <section class="w-full flex flex-col items-center gap-4">
         <h1 class="border-b pb-2 text-2xl lg:text-3xl font-semibold tracking-tight transition-colors">
           Uptime Calculator
         </h1>
@@ -43,7 +44,7 @@ export const UptimePage: VoidComponent = () => {
           Calculate a service downtime based on its uptime percentage.
         </h4>
 
-        <span class="border-b border-foreground opacity-50 w-full"></span>
+        <Divider />
 
         <div class="w-full flex flex-col gap-2">
           <p class="text-left text-sm font-medium leading-none">
@@ -72,7 +73,7 @@ export const UptimePage: VoidComponent = () => {
           class={"h-14"}
         />
 
-        <span class="border-b border-foreground opacity-50 w-full"></span>
+        <Divider />
 
         <section class="w-full grid gap-2 md:grid-cols-2">
           <DowntimeCard label="Daily" value={dailyUptime()} />

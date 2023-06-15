@@ -1,4 +1,5 @@
 import { createMemo, createSignal, VoidComponent } from "solid-js";
+import { Divider } from "~/components/Divider";
 import { Input } from "~/components/Input";
 import { Label } from "~/components/Label";
 import { formatCurrency, parseTextInput } from "~/lib/utils";
@@ -22,7 +23,17 @@ export const HourlyPage: VoidComponent = () => {
   });
 
   return (
-    <section class="w-full h-full flex flex-col items-center justify-center py-10">
+    <section class="w-full h-full flex flex-col items-center justify-center gap-4">
+      <h1 class="border-b pb-2 text-2xl lg:text-3xl font-semibold tracking-tight transition-colors">
+        Hourly Prices
+      </h1>
+
+      <h4 class="font-semibold tracking-tight">
+        Calculate a service price based on an hourly rate.
+      </h4>
+
+      <Divider />
+
       <div class="form-control w-full max-w-md">
         <Label>
           <span class="leading-5">What is the hourly rate?</span>

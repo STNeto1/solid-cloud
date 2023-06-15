@@ -7,7 +7,7 @@ import { UptimePage } from "./routes/Uptime";
 const App: Component = () => {
   return (
     <section class="container max-w-6xl py-4">
-      <nav class="flex items-center gap-2">
+      <nav class="flex items-center gap-2 justify-center pb-10">
         <Link href="/">Home</Link>
         <Link href="/hourly">Hourly</Link>
         <Link href="/uptime">Uptime</Link>
