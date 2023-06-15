@@ -6,12 +6,12 @@ type CardParagraph = Component<JSX.HTMLAttributes<HTMLParagraphElement>>;
 
 export const Card: CardDiv = (props) => (
   <div
+    {...props}
     class={cn(
       "rounded-lg border bg-card text-card-foreground shadow-sm",
       props.class,
       props.classList
     )}
-    {...props}
   />
 );
 
@@ -24,12 +24,12 @@ export const CardHeader: CardDiv = (props) => (
 
 export const CardTitle: CardParagraph = (props) => (
   <h3
+    {...props}
     class={cn(
       "text-lg font-semibold leading-none tracking-tight",
       props.class,
       props.classList
     )}
-    {...props}
   />
 );
 
