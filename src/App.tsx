@@ -5,6 +5,7 @@ import { HourlyPage } from "~/routes/Hourly";
 import { UptimePage } from "~/routes/Uptime";
 import { HomePage } from "~/routes/Home";
 import { _404Page } from "~/routes/_404";
+import { StoragePage } from "~/routes/Storage";
 
 const App: Component = () => {
   return (
@@ -13,15 +14,15 @@ const App: Component = () => {
         <Link href="/">Home</Link>
         <Link href="/hourly">Hourly</Link>
         <Link href="/uptime">Uptime</Link>
-        <Link href="/#" class="opacity-50">
-          Storage
-        </Link>
+        <Link href="/storage">Storage</Link>
       </nav>
 
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/hourly" element={<HourlyPage />} />
         <Route path="/uptime" element={<UptimePage />} />
+        <Route path="/storage" element={<StoragePage />} />
+
         <Route path="*" element={<_404Page />} />
       </Routes>
     </section>
